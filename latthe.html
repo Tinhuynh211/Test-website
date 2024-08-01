@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Karaoke</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #active a {
+            color: aqua;
+            border-bottom: 2px solid;
+            padding-bottom: 7px;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <input type="checkbox" id="check">
+            <label onclick="showSideBar()" for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a class="logo" href="/"><img
+                    src="https://www.ikara.co/react-source/static/media/header_logo_ikara.a8f014e4.svg" alt="logo"
+                    width="100%" height="60px"></a>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li id="active"><a href="#"></i><span>Trang Chủ</span></a></li>
+                <li><a href="#">Game Hay</a></li>
+                <li><a href="#">Hướng Dẫn</a></li>
+                <li><a href="#">Tin Tức</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#">Bắt Đầu</a>
+        <nav class="side__bar" id="sidebar">
+            <a href=""><img src="assets/img/avatar.avif" alt="avatar"></a>
+            <p><strong>Đăng nhập tài khoản</strong></p>
+            <p style="margin-bottom: 30px;">Bạn chưa đăng nhập</p>
+            <li>
+                <i class="fas fa-microphone"></i>
+                <a href="#">Trang Chủ</a>
+            </li>
+            <li>
+                <i class="fas fa-user"></i>
+                <a href="#">Game Hay</a>
+            </li>
+            <li>
+                <i class="fas fa-upload"></i>
+                <a href="#">Hướng Dẫn</a>
+            </li>
+            <li>
+                <i class="fas fa-newspaper"></i>
+                <a href="#">Tin Tức</a>
+            </li>
+        </nav>
+    </header>
+    <main class="main-latthe">
+        <h1 style="text-align: center; padding-top: 30px; padding-bottom: 20px;">Game Lật Thẻ</h1>
+        <h2 style=" padding-left: 150px ; margin-bottom: 5px;">Hướng Dẫn Cơ Bản</h2>
+        <p>Nhập số thẻ bạn muốn xuất hiện, Khi một người chơi lật hai thẻ lên, nếu hai thẻ đó giống nhau (cùng giá trị),
+            người chơi sẽ để cặp thẻ đó ngửa và có thể tiếp tục lật thêm hai thẻ nữa.Lặp lại đến khi kết thúc.Nếu không
+            cùng giá trị thì 2 thẻ sẽ tự úp lại</p>
+            <div class="input-container">
+                <label for="inputNumber">Nhập số thẻ (chẵn từ 4 đến 20): </label>
+        <input type="number" id="inputNumber" min="4" max="20" step="2">
+        <button id="startButton">Bắt Đầu</button>
+            </div>
+            <div id="gameBoard" class="game-board"></div>
+        
+
+
+
+
+    </main>
+
+
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+        document.getElementById('startButton').addEventListener('click', startGame);
+        function startGame(){
+            const inputNumber = parseInt(document.getElementById('inputNumber').value);
+            if(isNaN(inputNumber) || inputNumber < 2 || inputNumber > 20 || inputNumber % 2 !== 0){
+                alert("Vui lòng nhập số từ hợp lệ");
+                return;
+            }
+        }
+    </script>
+    <footer class="footer">
+        <div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

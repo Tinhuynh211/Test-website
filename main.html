@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Karaoke</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #active a {
+            color: aqua;
+            border-bottom: 2px solid;
+            padding-bottom: 7px;
+            padding-left: 2px;
+            padding-right: 2px;          
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <input type="checkbox" id="check">
+            <label onclick="showSideBar()" for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a class="logo" href="/"><img src="https://www.ikara.co/react-source/static/media/header_logo_ikara.a8f014e4.svg" alt="logo" width="100%" height="60px"></a>
+        </div>      
+        <nav>
+            <ul class="nav__links">
+                <li id="active"><a href="#"></i><span>Trang Chủ</span></a></li>
+                <li><a href="#">Game Hay</a></li>
+                <li><a href="#">Hướng Dẫn</a></li>
+                <li><a href="#">Tin Tức</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#">Bắt Đầu</a>
+        <nav class="side__bar" id="sidebar">
+            <a href=""><img src="assets/img/avatar.avif" alt="avatar"></a>
+            <p><strong>Đăng nhập tài khoản</strong></p>
+            <p style="margin-bottom: 30px;">Bạn chưa đăng nhập</p>
+            <li>
+                <i class="fas fa-microphone"></i>
+                <a href="#">Trang Chủ</a>
+            </li>
+            <li>
+                <i class="fas fa-user"></i>
+                <a href="#">Game Hay</a>
+            </li>
+            <li>
+                <i class="fas fa-upload"></i>
+                <a href="#">Hướng Dẫn</a>
+            </li>
+            <li>
+                <i class="fas fa-newspaper"></i>
+                <a href="#">Tin Tức</a>
+            </li>
+        </nav>
+    </header>
+    <main class="main">
+       <h2 style="text-align: center; padding-top: 30px; padding-bottom: 20px;">Game Nổi Bật</h2>
+       <div class="main-content">
+        <div>
+            <a href="latthe.html"><img src="./assets/img/game-luyen-tri-nho.webp" alt="" width="100%" height="210px"></a>
+            <p>Game Lật Bài</p>
+            
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/lap ghep.jpg" alt="" width="100%" height="210px"></a>
+            <p >Game Lắp Ghép</p>
+           
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/tre-hoc-toan-600.jpg" alt="" width="100%" height="210px"></a>
+            <p>Game Giải Toán</p>
+            
+           </div>
+       </div>
+       <div class="main-content">
+        <div>
+            <a href=""><img src="./assets/img/game-luyen-tri-nho.webp" alt="" width="100%" height="210px"></a>
+            <p>Game Lật Bài</p>
+            
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/lap ghep.jpg" alt="" width="100%" height="210px"></a>
+            <p >Game Lắp Ghép</p>
+           
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/tre-hoc-toan-600.jpg" alt="" width="100%" height="210px"></a>
+            <p>Game Giải Toán</p>
+            
+           </div>
+       </div>
+       <div class="main-content">
+        <div>
+            <a href=""><img src="./assets/img/game-luyen-tri-nho.webp" alt="" width="100%" height="210px"></a>
+            <p>Game Lật Bài</p>
+            
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/lap ghep.jpg" alt="" width="100%" height="210px"></a>
+            <p >Game Lắp Ghép</p>
+           
+           </div>
+           <div>
+            <a href=""><img src="./assets/img/tre-hoc-toan-600.jpg" alt="" width="100%" height="210px"></a>
+            <p>Game Giải Toán</p>
+            
+           </div>
+       </div>
+       
+    </main>
+    
+    
+    
+    <script>
+        function showSideBar() {
+            const sidebar = document.getElementById('sidebar');        
+            sidebar.classList.toggle('show');        
+        }
+    </script>
+</body>
+<footer class="footer">
+    <div>
+        
+    </div>
+</footer>
+</html>
